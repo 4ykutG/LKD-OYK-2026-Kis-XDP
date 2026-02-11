@@ -1,25 +1,45 @@
-LKD Mustafa Akgül Özgür Yazılım Kış Kampı 2026 - BPF & XDP Eğitimi
-Bu depo, Linux Kullanıcıları Derneği (LKD) tarafından düzenlenen Mustafa Akgül Özgür Yazılım Kış Kampı 2026 kapsamında gerçekleştirilen eBPF ve XDP (eXpress Data Path) eğitimi süresince geliştirilen uygulama, betik ve dökümanları içermektedir.
- Proje İçeriği
-Eğitim boyunca geliştirilen araçlar işlevlerine göre kategorize edilmiştir:
- Networking & XDP
-Yüksek performanslı paket işleme ve ağ güvenliği uygulamaları:
-XDP_Filters: Protokol (ICMP/Ping) ve IP bazlı (8.8.8.8) paket engelleme (Drop) filtreleri.
-Counters & Monitoring: Engellenen paketleri eBPF Map yapısı üzerinde sayan ve kullanıcı alanında (User-space) raporlayan araçlar.
-XDP_Action: Paket başlıklarını manipüle eden ve paketleri yansıtan (Mirroring/Swap) ileri seviye uygulamalar.
- System Tracing & Observability
-Linux Kernel içindeki olayları izlemek için kullanılan eBPF araçları:
-Syscalls: clone, openat2 gibi sistem çağrılarının zaman damgası ve PID bilgileriyle takibi.
-Performance: Disk I/O gecikmesi (Latency) ve ardışık sistem çağrılarının zamanlamasını analiz eden araçlar.
- Başlangıç
+LKD Mustafa Akgul Ozgur Yazilim Kis Kampi 2026 - BPF ve XDP Egitimi
+
+Bu depo, Linux Kullanicilari Dernegi (LKD) tarafindan duzenlenen Mustafa Akgul Ozgur Yazilim Kis Kampi 2026 kapsaminda gerceklestirilen eBPF ve XDP (eXpress Data Path) egitimi suresince gelistirilen uygulama, betik ve dokumanlari icermektedir.
+Proje Icerigi
+
+Egitim boyunca gelistirilen araclar islevlerine gore kategorize edilmistir:
+Networking ve XDP
+
+Yuksek performansli paket isleme ve ag guvenligi uygulamalari:
+
+    XDP_Filters: Protokol (ICMP/Ping) ve IP bazli (8.8.8.8) paket engelleme (Drop) filtreleri.
+
+    Counters ve Monitoring: Engellenen paketleri eBPF Map yapisi uzerinde sayan ve kullanici alaninda (User-space) raporlayan araclar.
+
+    XDP_Action: Paket basliklarini manipule eden ve paketleri yansitan (Mirroring/Swap) ileri seviye uygulamalar.
+
+System Tracing ve Observability
+
+Linux Kernel icindeki olaylari izlemek icin kullanilan eBPF araclari:
+
+    Syscalls: clone, openat2 gibi sistem cagrilarinin zaman damgasi ve PID bilgileriyle takibi.
+
+    Performance: Disk I/O gecikmesi (Latency) ve ardisik sistem cagrilarinin zamanlamasini analiz eden araclar.
+
+Baslangic
 Gereksinimler
-Uygulamaların derlenmesi ve çalıştırılması için sisteminizde aşağıdaki araçların bulunması gerekmektedir:
-LLVM / Clang
-libbpf & BCC (BPF Compiler Collection)
-Linux Kernel 5.x+ (XDP desteği için)
-Derleme Örneği
-Bir XDP programını derlemek için:
+
+Uygulamalarin derlenmesi ve calistirilmasi icin sisteminizde asagidaki araclarin bulunmasi gerekmektedir:
+
+    LLVM / Clang
+
+    libbpf ve BCC (BPF Compiler Collection)
+
+    Linux Kernel 5.x+ (XDP destegi icin)
+
+Derleme Ornegi
+
+Bir XDP programini derlemek icin:
 Bash
+
 clang -O2 -target bpf -c xdp_prog.c -o xdp_prog.o
- Lisans
-Bu projedeki tüm kodlar GPL lisansı ile korunmaktadır.
+
+Lisans
+
+Bu projedeki tum kodlar GPL lisansi ile korunmaktadir.
