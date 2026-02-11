@@ -1,0 +1,22 @@
+# Derlenmiş Nesne Dosyaları (eBPF bytecode)
+*.o
+*.so
+*.ko
+
+# LLVM/Clang Ara Dosyaları
+*.ll
+*.bc
+
+# Python Önbellek Dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Log Dosyaları ve Geçici Dosyalar
+*.log
+*.tmp
+*.swp
+
+# Binary (Çıktı) Dosyaları
+# Eğer özel bir binary ismin varsa buraya ekleyebilirsin
+listener
